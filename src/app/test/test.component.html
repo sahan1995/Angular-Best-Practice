@@ -18,7 +18,7 @@
 
 
 
-
+<!--ngIf-->
 <div *ngIf="show; then thenB; else elseB"></div>
 
 <ng-template #thenB>
@@ -38,3 +38,21 @@
 <!--event binding-->
 <button (click)="onClick($event,name.value)">Click</button>
 
+
+<!--ngSwitch-->
+
+<div [ngSwitch]="color">
+
+
+  <h1 *ngSwitchCase="'red'">You Picked Red </h1>
+  <h1 *ngSwitchCase="'green'"> You Picked Green </h1>
+  <h1 *ngSwitchCase="'blue'">You Picked Blue </h1>
+<h1 *ngSwitchDefault>Pick Color</h1>
+</div>
+
+
+
+
+<button (click)="onRedClick()">Red</button>
+<button (click)="onGreenClick()">Green</button>
+<button (click)="onBlueClick()">Blue</button>

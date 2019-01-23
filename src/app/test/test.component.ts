@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-test',
@@ -7,21 +7,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
-  public name="";
+  public name = "";
   public click = "";
   public show = true;
-  constructor() { }
+  public color = "";
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
-  onClick(event,name){
+  onClick(event, name) {
 
-    if(this.show){
+    if (this.show) {
       this.show = false;
-    }else{
+    } else {
       this.show = true;
     }
+  }
+
+  onRedClick() {
+    this.color = "red";
+  }
+
+  onGreenClick() {
+    this.color = "green"
+  }
+
+  onBlueClick() {
+    this.color = "blue";
   }
 
 }
