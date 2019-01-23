@@ -11,6 +11,7 @@ export class TestComponent implements OnInit {
   public click = "";
   public show = true;
   public color = "";
+  public colors = ["Red", "Green", "Blue", "Orange", "Black", "White"];
 
   constructor() {
   }
