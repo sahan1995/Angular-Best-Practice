@@ -1,5 +1,10 @@
 
+<!--two way data binding-->
 <input   [(ngModel)]="name" type="text">
+{{name}}
+<br>
+<br>
+
 <!--event binding-->
 <button (click)="onClick($event,name.value)">Click</button>
-{{name}}
+
