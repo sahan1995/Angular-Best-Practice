@@ -9,13 +9,19 @@ export class TestComponent implements OnInit {
 
   public name="";
   public click = "";
+  public show = true;
   constructor() { }
 
   ngOnInit() {
   }
+
   onClick(event,name){
-    console.log(event,name)
-    this.click = name;
+
+    if(this.show){
+      this.show = false;
+    }else{
+      this.show = true;
+    }
   }
 
 }

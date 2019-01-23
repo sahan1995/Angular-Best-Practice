@@ -4,6 +4,36 @@
 {{name}}
 <br>
 <br>
+<h1 *ngIf="show; else elseBlock">
+
+  Hello Angular
+
+
+</h1>
+<ng-template #elseBlock>
+  <h1>
+    Sahan Rajakaruna
+  </h1>
+</ng-template>
+
+
+
+
+<div *ngIf="show; then thenB; else elseB"></div>
+
+<ng-template #thenB>
+  <h1>
+    When True
+  </h1>
+</ng-template>
+
+<ng-template #elseB>
+  <h1>
+    When False
+  </h1>
+</ng-template>
+
+
 
 <!--event binding-->
 <button (click)="onClick($event,name.value)">Click</button>
