@@ -3,6 +3,7 @@
 <input   [(ngModel)]="name" type="text">
 {{name}}
 <br>
+
 <br>
 <h1 *ngIf="show; else elseBlock">
 
@@ -61,3 +62,22 @@
 <div *ngFor="let color of colors">
 <h3>{{color}}</h3>
 </div>
+
+<h1>{{"This is from app component ------'"+ tit+"'"}}</h1>
+<!--Pipes-->
+<h2>{{name1|lowercase}}</h2>
+<h2>{{name1|uppercase}}</h2>
+<h2>{{name1|titlecase}}</h2>
+<h2>{{name1|slice:3}}</h2>
+<h2>{{name1|slice:3:5}}</h2>
+<h2>{{name1|json}}</h2>
+<h2>{{person|json}}</h2>
+
+<h2>{{.50|percent}}</h2>
+<h2>{{.50|currency}}</h2>
+<h2>{{.50|currency:'GBP'}}</h2>
+<h2>{{date}}</h2>
+<h2>{{date|date}}</h2>
+<h2>{{date|date:'short'}}</h2>
+<h2>{{date|date:'shortDate'}}</h2>
+<h2>{{date|date:'shortTime'}}</h2>

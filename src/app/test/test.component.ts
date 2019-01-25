@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit,Input} from '@angular/core';
 
 @Component({
   selector: 'app-test',
@@ -12,7 +12,14 @@ export class TestComponent implements OnInit {
   public show = true;
   public color = "";
   public colors = ["Red", "Green", "Blue", "Orange", "Black", "White"];
-
+  public name1 = "learning angular ";
+  public person={
+    firstname : "Sahan",
+    lastname : "Rajakaruna",
+    age : 15
+  }
+  public date = new Date();
+@Input('parentData') public tit;
   constructor() {
   }
 
